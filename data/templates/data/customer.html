@@ -1,0 +1,46 @@
+{% extends "data/main.html" %}
+
+{% block content %}
+<h1 class="sr-only">{{ title }}</h1>
+<section class="row">
+    <div class="col-lg-4 mb-3">
+        <div class="content-panel customer-card">
+            <h2>Customer:</h2>
+            <button type="button" class="btn btn-outline-info">Update Customer</button>
+            <button type="button" class="btn btn-outline-danger">Delete Customer</button>
+        </div>
+    </div>
+    <div class="col-lg-4 mb-3">
+        <div class="content-panel customer-card">
+            <h2>Contact Information</h2>
+            <p>Email:</p>
+            <p>Phone:</p>
+        </div>
+    </div>
+    <div class="col-lg-4 mb-3">
+        <div class="content-panel customer-card">
+            <h2>Total Orders</h2>
+        </div>
+    </div>
+</section>
+
+<form class="content-panel customer-search" method="get" role="search">
+    <button class="btn btn-primary" type="submit">Search</button>
+</form>
+
+<section class="content-panel">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Product</th>
+                <th scope="col">Category</th>
+                <th scope="col">Date Ordered</th>
+                <th scope="col">Status</th>
+                <th scope="col">Update</th>
+                <th scope="col">Remove</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</section>
+{% endblock content %}

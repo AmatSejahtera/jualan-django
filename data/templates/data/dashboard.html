@@ -1,0 +1,62 @@
+{% extends "data/main.html" %}
+
+{% block content %}
+<h1 class="sr-only">{{ title }}</h1>
+
+<section class="row" aria-label="Order summary">
+    <div class="col-md-4">
+        <div class="card summary-card summary-orders">
+            <div class="card-header">Total Orders</div>
+            <div class="card-body"></div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card summary-card summary-delivered">
+            <div class="card-header">Orders Delivered</div>
+            <div class="card-body"></div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card summary-card summary-pending">
+            <div class="card-header">Orders Pending</div>
+            <div class="card-body"></div>
+        </div>
+    </div>
+</section>
+
+<section class="row">
+    <div class="col-lg-5 mb-4">
+        <h2 class="section-title">Customers:</h2>
+        <div class="content-panel">
+            <a class="panel-action" href="{% url 'customer' %}">Create Customer</a>
+            <table class="table table-borderless">
+                <thead>
+                    <tr>
+                        <th scope="col">Customer</th>
+                        <th scope="col">Orders</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+    <div class="col-lg-7 mb-4">
+        <h2 class="section-title">Last 5 Orders</h2>
+        <div class="content-panel">
+            <a class="panel-action" href="{% url 'products' %}">Create Order</a>
+            <table class="table table-borderless">
+                <thead>
+                    <tr>
+                        <th scope="col">Product</th>
+                        <th scope="col">Date Ordered</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Update</th>
+                        <th scope="col">Remove</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+</section>
+{% endblock content %}
